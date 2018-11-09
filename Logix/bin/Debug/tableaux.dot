@@ -1,0 +1,24 @@
+graph logic { 
+node [ shape=box, fontname = "Sans serif" ] 
+node1 [ label = "{ ¬((¬A ∧ ¬B) ∨ (A ∧ C)) } []" ]
+node2 [ label = "{ ¬(¬A ∧ ¬B), ¬(A ∧ C) } []" ]
+node1 -- node2
+node3 [ label = "{ ¬¬A, ¬(A ∧ C) } []" ]
+node2 -- node3
+node4 [ label = "{ A, ¬(A ∧ C) } []" ]
+node3 -- node4
+node5 [ label = "{ A, ¬A } []" ]
+node4 -- node5
+node6 [ label = "X" ]
+node5 -- node6
+node7 [ label = "{ A, ¬C } []" ]
+node4 -- node7
+node8 [ label = "{ ¬¬B, ¬(A ∧ C) } []" ]
+node2 -- node8
+node9 [ label = "{ B, ¬(A ∧ C) } []" ]
+node8 -- node9
+node10 [ label = "{ B, ¬A } []" ]
+node9 -- node10
+node11 [ label = "{ B, ¬C } []" ]
+node9 -- node11
+}
